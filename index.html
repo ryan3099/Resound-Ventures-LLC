@@ -1,67 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resound Ventures LLC</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+        body {background:#2e003e; color:#fff; transition:background 0.4s, color 0.4s;}
+        .light-mode {background:#f0f8ff; color:#000;}
+        header {position:fixed; top:0; left:0; width:100%; background:rgba(46,0,62,0.9); padding:15px 30px; display:flex; justify-content:space-between; align-items:center; z-index:100;}
+        header.light-mode {background:rgba(240,248,255,0.9);}
+        header nav a {margin:0 15px; color:#a29bfe; text-decoration:none; font-weight:600;}
+        header button {background:none; border:1px solid #74b9ff; color:#74b9ff; padding:5px 10px; border-radius:6px; cursor:pointer;}
+        section {padding:80px 20px; max-width:1100px; margin:auto; text-align:center;}
+        .hero {background:url('https://prodetok.by/img/smyk/3.jpg') center/cover no-repeat; color:#fff; padding:150px 20px;}
+        .hero h1 {font-size:2.5rem; margin-bottom:20px; text-shadow:1px 1px 3px #000;}
+        .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:30px;}
+        .card {background:rgba(255,255,255,0.05); padding:20px; border-radius:10px; transition:transform 0.3s;}
+        .card:hover {transform:scale(1.05);}
+        .portfolio img {width:100%; border-radius:10px; transition:transform 0.3s;}
+        .portfolio img:hover {transform:scale(1.05);}
+        .counter {font-size:2rem; color:#74b9ff; margin-top:10px;}
+        .testimonial-card {background:rgba(255,255,255,0.05); padding:15px; border-radius:10px;}
+        .testimonial-card img {width:50px; height:50px; border-radius:50%; margin-bottom:10px;}
+        .contact form {display:flex; flex-direction:column; gap:10px;}
+        .contact input, .contact textarea {padding:10px; border-radius:5px; border:1px solid #ccc;}
+        .contact button {background:#a29bfe; color:#000; padding:10px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;}
+        footer {text-align:center; padding:20px; background:#1b0024;}
+    </style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
+    <header>
+        <div><strong>Resound Ventures LLC</strong></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="modeToggle">☀️ / 🌙</button>
+    </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+    <section class="hero">
+        <h1>Innovative Ventures, Resounding Success</h1>
+        <p>Resound Ventures LLC - San Rafael, CA</p>
+    </section>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
-    </div>
-  </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Resound Ventures LLC specializes in creating and supporting innovative projects, building a strong foundation for future growth.</p>
+    </section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+    <section id="services">
+        <h2>Services</h2>
+        <div class="grid">
+            <div class="card">Business consulting and strategy</div>
+            <div class="card">Investment and funding solutions</div>
+            <div class="card">Project management and execution</div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="grid">
+            <img src="https://pp.userapi.com/Jnm2_PSL65-zoc_f2DhFqgbKnLuK8N6jbFqm6Q/e6BA0DlqPpk.jpg" alt="portfolio1">
+            <img src="https://prodetok.by/img/smyk/3.jpg" alt="portfolio2">
+            <img src="https://i1.photo.2gis.com/images/branch/0/30258560070322814_68fc.jpg" alt="portfolio3">
+        </div>
+    </section>
+
+    <section id="counters">
+        <h2>Our Achievements</h2>
+        <div class="grid">
+            <div><div class="counter" data-target="150">0</div><p>Happy Clients</p></div>
+            <div><div class="counter" data-target="75">0</div><p>Projects Delivered</p></div>
+            <div><div class="counter" data-target="10">0</div><p>Years in Business</p></div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="grid">
+            <div class="testimonial-card"><img src="https://i.pravatar.cc/50?1"><p>Resound Ventures helped our startup thrive!</p><strong>⭐⭐⭐⭐⭐</strong></div>
+            <div class="testimonial-card"><img src="https://i.pravatar.cc/50?2"><p>Excellent strategic advice and support.</p><strong>⭐⭐⭐⭐⭐</strong></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> San Rafael, CA, 94903-3618 United States<br>
+           <strong>Phone:</strong> 209-370-8861<br>
+           <strong>Email:</strong> contact@vilambon.shop</p>
+        <iframe src="https://www.google.com/maps?q=San+Rafael,+CA,+94903-3618&output=embed" width="100%" height="300" style="border:0; margin-top:20px; border-radius:10px;"></iframe>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Resound Ventures LLC - All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mode toggle
+        const toggleBtn = document.getElementById('modeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            document.querySelector('header').classList.toggle('light-mode');
+        });
+
+        // Counters animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+            updateCount();
+        });
+    </script>
 </body>
 </html>
